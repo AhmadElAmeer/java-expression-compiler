@@ -1,0 +1,29 @@
+15 timed runs per cell after 2 warm-up runs; median wall time.
+Java 21.0.12.1, 2 cores
+
+program       tree (ms)      vm (ms)   vm -O (ms)   tree/vm    vm instrs run vm -O instrs run    saved
+fib               173.0         37.1         37.3      4.7x        6,356,210        6,356,210     0.0%
+primes            234.2        139.5        133.8      1.7x       24,089,841       24,089,841     0.0%
+collatz           466.5        334.2        336.5      1.4x       58,952,353       58,952,353     0.0%
+gcd                69.8         48.3         60.6      1.4x        7,564,399        7,564,399     0.0%
+constants          69.6         47.9         29.6      1.5x        8,200,017        5,400,013    34.1%
+
+15 timed runs per cell after 2 warm-up runs; median wall time.
+Java 21.0.12.1, 2 cores
+
+program       tree (ms)      vm (ms)   vm -O (ms)   tree/vm    vm instrs run vm -O instrs run    saved
+fib               189.2         46.3         37.9      4.1x        6,356,210        6,356,210     0.0%
+primes            235.8        130.4        127.1      1.8x       24,089,841       24,089,841     0.0%
+collatz           452.9        334.6        325.9      1.4x       58,952,353       58,952,353     0.0%
+gcd                65.4         42.5         42.8      1.5x        7,564,399        7,564,399     0.0%
+constants          65.8         48.7         33.0      1.4x        8,200,017        5,400,013    34.1%
+
+Experiment (not the published code): the same benchmark with the VM's per-instruction step-limit
+check removed, on a copy of the project. One run of `bench 15`:
+
+program       tree (ms)      vm (ms)   vm -O (ms)   tree/vm
+fib               158.8         30.8         33.0      5.2x
+primes            220.8        107.1        106.3      2.1x
+collatz           446.8        262.5        269.3      1.7x
+gcd                65.2         34.3         34.5      1.9x
+constants          71.9         35.7         25.2      2.0x
