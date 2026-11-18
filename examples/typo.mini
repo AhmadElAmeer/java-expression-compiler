@@ -1,0 +1,6 @@
+fn area(w: int, h: int): int {
+    return w * h;
+}
+
+let ok = area(3, 4) > 10;
+let bad = area(3, true);

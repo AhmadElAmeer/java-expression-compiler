@@ -1,0 +1,9 @@
+// Naive recursive Fibonacci: 635,621 calls, so it measures call overhead.
+fn fib(n: int): int {
+    if (n < 2) {
+        return n;
+    }
+    return fib(n - 1) + fib(n - 2);
+}
+
+print fib(27);

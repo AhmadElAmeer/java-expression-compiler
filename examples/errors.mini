@@ -1,0 +1,7 @@
+fn average(total: int, count: int): int {
+    return total / count;
+}
+
+print average(10, 2);
+print average(10, 0);
+print 1;
